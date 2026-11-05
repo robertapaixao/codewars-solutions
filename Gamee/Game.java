@@ -11,12 +11,15 @@ public class Game {
 
         for (int i = 0; i < deckSteve.length; i++) {
 
-            int cardSteve = cards.indexOf(deckSteve[i]);
-            int cardJosh = cards.indexOf(deckJosh[i]);
+            char cardSteve = deckSteve[i].charAt(0);
+            char cardJosh = deckJosh[i].charAt(0);
 
-            if (cardSteve > cardJosh) {
+            int valueSteve = cards.indexOf(cardSteve);
+            int valueJosh = cards.indexOf(cardJosh);
+
+            if (valueSteve > valueJosh) {
                 steve++;
-            } else if (cardJosh > cardSteve) {
+            } else if (valueJosh > valueSteve) {
                 josh++;
             }
         }
